@@ -27,7 +27,7 @@ router.get('/team', function(req, res, next) {
 
 
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Express' });
+  res.render('about');
 });
 
 module.exports = router;
