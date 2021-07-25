@@ -24,6 +24,9 @@
       <link rel="stylesheet" href="css/colors.css" />
       <!-- wow animation css -->
       <link rel="stylesheet" href="css/animate.css" />
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -41,20 +44,17 @@
                         <ul class="clearfix">
                            <li><a href="about.html">A Propos</a></li>
                            <li><a href="service.html">Chercher Jobs</a></li>
-                           <li><a href="screenshots.html">Publier un service</a></li>
-                           <li><a href="pricing.html">consulter</a></li>
                            <li><a href="team.html">Equipe</a></li>
                            <li><a href="profile.html">Votre Profile</a></li>
-
+                           <button  style="width: 100px;" class="btn btn-primary" id="btn_login"><i class="fa fa-circle" style="color:white;"></i></a> login</button>
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="col-md-3 col-lg-2">
-                  <div class="right_bt"><a class="bt_main" href="login.html">Login</a> 
-                     <a class="bt_main" href="registration.html">Sign Up</a> 
-                  </div>
-               </div>
+               <!-- tof de profil -->
+               <div class="right" style="margin-right: -100px;">
+                  <p class="user"><img src="images/t1.png" height="60px" width="60px"></i></p>
+                </div>
             </div>
          </div>
       </header>
@@ -74,7 +74,7 @@
                </div>
                <div class="col-md-6">
                   <div class="full">
-                     <div class="slide_pc_img wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s"> <img src="images/pc-banner.png" alt="#" /> </div>
+                     <div class="slide_pc wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s"> <img src="images/pc-banner.png" alt="" /> </div>
                   </div>
                </div>
             </div>
@@ -352,7 +352,7 @@
                               <div class="table_price_cont">
                                  <div class="table_price_per">
                                     <p>$29.00<br>
-                                       <small>/*/</small>
+                                       <small>/salaire potentiel/</small>
                                     </p>
                                  </div>
                                  <div class="table_price_cont_bottm">
@@ -373,7 +373,7 @@
                               <div class="table_price_cont">
                                  <div class="table_price_per">
                                     <p>$39.00<br>
-                                       <small>/*/</small>
+                                       <small>/salaire potentiel/</small>
                                     </p>
                                  </div>
                                  <div class="table_price_cont_bottm">
@@ -393,8 +393,8 @@
                               </div>
                               <div class="table_price_cont">
                                  <div class="table_price_per">
-                                    <p>$...<br>
-                                       <small>/*/</small>
+                                    <p>$50<br>
+                                       <small>/salaire potentiel/</small>
                                     </p>
                                  </div>
                                  <div class="table_price_cont_bottm">
@@ -420,7 +420,9 @@
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
                   <div class="full">
-                     <div id="map"></div>
+                     <div class="full">
+                        <div class="slide wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s"> <img src="images/pc-banner.png" alt="" /> </div>
+                     </div>
                   </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
@@ -462,6 +464,7 @@
          </div>
       </section>
       <!-- end section -->
+
       <!-- footer -->
       <footer class="footer_style_2">
          <div class="footer_top">
@@ -537,10 +540,66 @@
          </div>
          <!-- footer bottom -->
          <div class="footer_bottom">
-            <p>Dessigned and developed<strong> for Project_university</strong></p>
+            <p>Designed and developed<strong> for Project_university</strong></p>
          </div>
       </footer>
       <!-- end footer -->
+   <!-- forme model login -->
+    <!-- login  -->
+    <div class="bg-login">
+      <div class="modal-login">
+          <div class="close_login">+</div>
+          <p>
+              <h3> Login</h3>
+          </p>
+          <form method="post" id="nForm" action="index.html">
+             <div class="wrap-login100">
+                     <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">phone number</label>
+                        <input type="text" class="form-control" id="inputmail" placeholder="phone number">
+                     </div>
+
+                     <br>
+
+                     <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      </div>
+                 
+                     <div class="text-right p-t-8 p-b-31">
+                        <a  class="link link-primary" href="registration.html">Vous ne possede pas de comptes</a>
+                     </div>
+                     <br>
+                     <div>
+                         <input type="submit" value="Connexion" class="btn btn-success">
+                     </div>
+                     <div class="txt1 text-center p-t-54 p-b-20">
+                         <span>
+                             Connectez vous via
+                         </span>
+                     </div>
+ 
+                     <div class="social">
+                         <a href="#" class="login100-social-item bg1">
+                             <i class="fa fa-facebook"></i>
+                         </a>
+ 
+                         <a href="#" class="login100-social-item bg2">
+                             <i class="fa fa-twitter"></i>
+                         </a>
+ 
+                         <a href="#" class="login100-social-item bg3">
+                             <i class="fa fa-google"></i>
+                         </a>
+                     </div>  
+                     </div>
+             </div>
+         </div>
+     </div>
+          </form>
+      </div>
+     </div>
+     <!-- end login  -->
       <!--=========== js section ===========-->
       <!-- jQuery (necessary for Bootstrap's JavaScript) -->
       <script src="js/jquery.min.js"></script>
@@ -550,9 +609,19 @@
       <script src="js/wow.js"></script>
       <!-- custom js -->
       <script src="js/custom.js"></script>
-      <script src="js/test.js"></script>
+      <!-- query js -->
+      <script src="js_query/open_services.js"></script>
       <!-- google map js -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
       <!-- end google map js -->
+      <script type="text/javascript">
+         document.getElementById('btn_login').addEventListener('click', function(){
+             document.querySelector('.bg-login').style.display = 'flex';
+         });
+         document.querySelector('.close_login').addEventListener('click', function(){
+             document.querySelector('.bg-login').style.display = 'none';
+         });
+     
+     </script>
    </body>
 </html>

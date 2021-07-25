@@ -1,0 +1,12 @@
+Accueil
+a propos
+chercher jobs
+equipe
+profile: 
+    info profile: nom prenom, etc...
+    consulter:
+        jobs
+        publier un service
+        service publier
+        voir ses activies recentes et en cours
+        acceder a ses stats
