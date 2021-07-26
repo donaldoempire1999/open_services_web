@@ -165,7 +165,8 @@ export class User {
                     user.token = data.token;
 
                     // Ici on met l'utilisateur courant dans la session en cours
-                     sessionStorage.setItem("current_user", user);
+                     localStorage.setItem("profile_view", user.getProfileView());
+
                     
                     result.user = user;
 

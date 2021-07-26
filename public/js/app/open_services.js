@@ -1,4 +1,4 @@
-let home = async () => {
+/* let home = async () => {
 
    let response = await fetch("https://open-services-api.herokuapp.com/");
    let data = await response.json()
@@ -60,6 +60,7 @@ nForm.addEventListener('submit', function (e) {
    })
 
 });
+*/
 
 /* login 
 let login = async () => {
