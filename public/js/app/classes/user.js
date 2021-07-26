@@ -36,6 +36,87 @@ export class User {
     //Les contrats de l'utilisateur
     contracts = [];
 
+    
+    setRow(label , value){
+
+        return `<tr> <td> ${label} </td> <td> ${value} </td> 
+        
+        <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button></td> </tr>`
+     
+     }
+
+
+    getCategoryView(){
+
+        return this.setRow("Type Utilisateur", this.category.type_user).concat(this.setRow(this.category.role))
+  
+     }
+
+
+
+     getPersonView(){
+
+        if(this.person.first_name === " "){
+            return " "
+        }
+
+        return this.setRow("First Name" , this.person.first_name)
+         
+            .concat(this.setRow("Second Name" , this.person.second_name))
+
+             .concat(this.setRow("Birth Day" , this.person.birthday));
+        
+        
+     }
+
+
+      getEntrepriseView(){
+
+        if(this.entreprise.name === ""){
+            return " "
+        }
+       
+        return this.setRow("Entrprise Name" , this.entreprise.name)
+          
+              .concat(this.setRow("Creation Date" , this.entreprise.creation_date));
+     
+      }
+
+      getAddressView(){
+
+    
+        return this.setRow("Country", this.address.country)
+        
+             .concat(this.setRow("Region", this.address.region)).concat(this.setRow(""))
+
+                  .concat(this.setRow("City", this.address.city))
+                   
+                      .concat(this.setRow("Quarter", this.address.quarter));
+
+       }
+
+
+    getProfileView(){
+    
+        let body_table = "";
+
+        body_table = body_table.concat(this.getCategoryView())
+        
+            .concat(this.getPersonView())
+          
+              .concat(this.getEntrepriseView())
+
+                .concat(this.getAddressView())
+
+                   .concat(this.setRow("Email" , this.email))
+                    
+                     .concat(this.setRow("Numero de telephone" , this.phone_number));
+
+        
+                     return `<table> ${body_table} </table>`;
+    
+    }
+
 
     static async get_user(_id){
 
@@ -67,6 +148,11 @@ export class User {
 
     static async login (form_data){
 
+        let result = {
+            user: new User(),
+            error: null
+        }
+
         try{
                 
                 let response = await request("/users/login","POST",form_data);
@@ -76,16 +162,27 @@ export class User {
                 if(!data.error){
 
                     let user = await this.get_user(data.userId);
+                    
                     user.token = data.token;
-                    return user;
 
+                    // Ici on met l'utilisateur courant dans la session en cours
+                    //sessionStorage("current_user", user);
+                    
+                    result.user = user;
+
+                }else{
+                     result.error = data.error;
                 }
 
-                alert(data.error);
+               
 
         }catch(error){
 
             console.log(error.toString());
+        
+        }finally{
+        
+            return result;
         
         }
 
@@ -98,5 +195,6 @@ export class User {
         return await response.json();
     
     }
+
 
 }
