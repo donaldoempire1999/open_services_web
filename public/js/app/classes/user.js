@@ -65,27 +65,35 @@ export class User {
 
 
 
-    static async login (form_data_login){
-          
-        let response = await request("/users/login","POST",form_data_login);
+    static async login (form_data){
 
-        let data = await response.json();
+        try{
+                
+                let response = await request("/users/login","POST",form_data);
 
-        if(!data.error){
+                let data = await response.json();
 
-            let user = await this.get_user(data.userId);
-            user.token = data.token;
-            return user;
+                if(!data.error){
 
-         }
+                    let user = await this.get_user(data.userId);
+                    user.token = data.token;
+                    return user;
 
-         return data.error;
+                }
+
+                alert(data.error);
+
+        }catch(error){
+
+            console.log(error.toString());
+        
+        }
 
     }
     
     static async signup(form_data_signup){
 
-        let response = await request("/users/signup","POST",form_data_signup);
+        let response = await request("/users/signup","GET",form_data_signup);
         
         return await response.json();
     
