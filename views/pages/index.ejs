@@ -1,10 +1,10 @@
-  <%-include("./layout/header") %>
+  <%-include("../layout/header") %>
 
    <body id="default_theme" class="home_page1">
       <!-- header -->
       <header class="header header_style1">
          <div class="container">
-            <%-include("./layout/") %>
+            <%-include("../layout/nav") %>
          </div>
       </header>
       <section id="banner_parallax" class="slide_banner1">
@@ -414,13 +414,18 @@
       </section>
       <!-- end section -->
 
-      <%- include("./layout/footer") %> 
-   <!-- forme model login -->
-    <!-- login  -->
+            
+                     <!-- footer -->
 
-    <%- include("./modals/login") %> 
+                        <%- include("../layout/footer") %> 
+               
+                     <!-- -->
+         
+                     <!-- form modal login -->
 
-         <!-- end login  -->
+                         <%- include("../modals/login") %> 
+
+                     <!-- end login  -->
 
      </div>
           </form>
@@ -431,14 +436,24 @@
 </html>
 
 
-<%-include("./layout/scripts") %>
+      <!-- Tout les scripts communs à toute les pages sont dans layout/scripts-->
 
-      <script type="text/javascript">
-         document.getElementById('btn_login').addEventListener('click', function(){
-             document.querySelector('.bg-login').style.display = 'flex';
-         });
-         document.querySelector('.close_login').addEventListener('click', function(){
-             document.querySelector('.bg-login').style.display = 'none';
-         });
-     
-     </script>
+          <%-include("../layout/scripts") %>
+
+      <!---->
+
+
+      <!-- Scripts personnalisées à cette pages -->
+
+            <script type="text/javascript">
+               document.getElementById('btn_login').addEventListener('click', function(){
+                  document.querySelector('.bg-login').style.display = 'flex';
+               });
+               document.querySelector('.close_login').addEventListener('click', function(){
+                  document.querySelector('.bg-login').style.display = 'none';
+               });
+         
+          </script>
+
+
+     <!---->

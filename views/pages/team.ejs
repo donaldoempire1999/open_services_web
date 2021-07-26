@@ -1,79 +1,114 @@
-<%-include("./layout/header") %>
+<%-include("../layout/header") %>
 
    <body id="default_theme" class="team">
       <!-- header -->
       <header class="header header_style1">
          <div class="container">
-            <%-include("./layout/nav") %>
-
+            <%-include("../layout/nav") %>
          </div>
       </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2>Team</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!-- end header -->
+      <!-- section -->
+      <section class="layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="full text_align_center">
+          <div class="heading_main center_head_border heading_style_1">
+            <h2>Our Team</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="full team_blog">
+          <div class="team_member_img"><img src="images/t1.png" alt="#"></div>
+          <div class="team_imform">
+            <p class="team_mem_name">Donald Daquin</p>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="full team_blog">
+          <div class="team_member_img"><img src="images/t2.png" alt="#"></div>
+          <div class="team_imform">
+            <p class="team_mem_name">Abouar Prosper</p>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="full team_blog">
+          <div class="team_member_img"><img src="images/t3.png" alt="#"></div>
+          <div class="team_imform">
+            <p class="team_mem_name">Gwoen Khris</p>
+            <p>Seo</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+        <div class="full team_blog">
+          <div class="team_member_img"><img src="images/t4.png" alt="#"></div>
+          <div class="team_imform">
+            <p class="team_mem_name">Sime Excel</p>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- end section -->
       <!-- section -->
       <section class="contact_section">
          <div class="container-fluid">
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
                   <div class="full">
-                     <div class="logo"><a href="index.html"><img src="images/icon1.png" alt="#" /></a></div>
-                     <div class="full">
-                        <div class="slide wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s"> <img src="images/pc-banner.png" alt="" /> </div>
-                     </div>
+                     <div id="map"></div>
                   </div>
                </div>
-               <div class="col-xs-12 col-sm-12 col-md-6" style="padding:-100px;">
+               <div class="col-xs-12 col-sm-12 col-md-6" style="padding:0;">
                   <div class="full">
                      <div class="contact_form white_heading_border">
                         <div class="contact_form_inner">
                            <div class="full_heading white_fonts heading_main heading_style_1">
-                              <h2>Registration <span>Page</span></h2>
+                              <h2>Contact <span>us</span></h2>
                            </div>
-                           <p>Toute les informations que vous nous transmettez via cette pages resterons confidentielles.</p>
+                           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                            <div class="form_contact">
                               <!-- form -->
-                              <form method="post" action="profile.html" id="rForm">
+                              <form action="index.html">
                                  <fieldset>
                                     <div class="field">
                                        <input type="text" name="name" placeholder="Your name" required="" />
                                     </div>
                                     <div class="field">
-                                       <input type="text" name="surname" placeholder="Your surname" required="" />
-                                    </div>
-                                    <div class="field">
                                        <input type="text" name="name" placeholder="Your phone" required="" />
                                     </div>
                                     <div class="field">
-                                        <input type="text" name="mdp" placeholder="Password" required="" />
-                                     </div>
-                                     <div class="field">
-                                        <input type="text" name="mdp_confirm" placeholder="Confirm Password" required="" />
-                                     </div>
-                                     <div class="field">
-                                        <input type="text" name="address" placeholder="Pays" required="" class="form-control"/>
-                                        <input type="text" name="region" placeholder="Region" required="" class="form-control"/>
-                                        <input type="text" name="ville" placeholder="Ville" required="" class="form-control"/>
-                                        <input type="text" name="quartier" placeholder="Quartier" required="" class="form-control"/>
-                                        <input type="text" name="bp" placeholder="BP:" required="" class="form-control"/>
-                                     </div>
-                                    <div class="field">
                                        <input type="email" name="email" placeholder="Email" required="" />
-                                    </div><br>
+                                    </div>
                                     <div class="field">
-                                        <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
-                                            <option value="">Categorie</option>
-                                            <option value="Personne Physique">Personne Physique</option>
-                                            <option value="Personne Morale">Personne Morale</option> 
-                                        </select>
-                                    </div><br>
+                                       <textarea name="messager" placeholder="Messager" required=""></textarea>
+                                    </div>
                                     <div class="field">
-                                       <select name="select_place" id="select_place" class="selectpicker form-control" data-style="btn-white">
-                                           <option value="">vous etez un(e)?</option>
-                                           <option value="Personne Physique">Jobber</option>
-                                           <option value="Personne Morale">Entreprise</option> 
-                                       </select>
-                                   </div>
-                                    <div class="field">
-                                       <button class="field_bt">Continue</button>
+                                       <button class="field_bt">Send</button>
                                     </div>
                                  </fieldset>
                               </form>
@@ -166,9 +201,8 @@
          </div>
       </footer>
      
-      <!-- end google map js -->
    </body>
 </html>
 
 
-<%-include("./layout/scripts") %>
+<%-include("../layout/scripts") %>
