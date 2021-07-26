@@ -48,7 +48,7 @@ export class User {
 
     getCategoryView(){
 
-        return this.setRow("Type Utilisateur", this.category.type_user).concat(this.setRow(this.category.role))
+        return this.setRow("Type Utilisateur", this.category.type_user).concat(this.setRow("Role", this.category.role))
   
      }
 
@@ -83,7 +83,6 @@ export class User {
       }
 
       getAddressView(){
-
     
         return this.setRow("Country", this.address.country)
         
@@ -166,7 +165,7 @@ export class User {
                     user.token = data.token;
 
                     // Ici on met l'utilisateur courant dans la session en cours
-                    //sessionStorage("current_user", user);
+                     sessionStorage.setItem("current_user", user);
                     
                     result.user = user;
 
