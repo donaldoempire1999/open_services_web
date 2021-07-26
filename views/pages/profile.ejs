@@ -28,8 +28,8 @@
          <div class="row">
             <ul>
                <li><button class="btnbtn btn-success" id="btn_profile">Info Profile</button></li>
-               <li><button class="btnbtn btn-success" id="btn_consult">Consulter</button></li>
-               <li><button class="btnbtn btn-success" id="btn_jobs">Mes Jobs</button></li>
+               <li><button class="btnbtn btn-success" id="btn_consult">Mes publications</button></li>
+               <li><button class="btnbtn btn-success" id="btn_jobs">Mes Contrats</button></li>
                <li><button class="btnbtn btn-success" id="btn_media">Publier</button></li>
                <li><button class="btnbtn btn-success" id="btn_stats">Statistiques</button></li>
             </ul>
@@ -37,48 +37,15 @@
 
          <!-- section profile-->
          <div class="front_profile">
-            <div class="container">
-               <table class="table">
-                  <tr>
-                  <td>Votre nom</td>
-                  <td>Sime Excel</td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Votre Prenom</td>
-                  <td>TOi TOI</td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Votre email</td>
-                  <td>lui@gmail.com</td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Votre Mot de passe</td>
-                  <td>*************  <button class="btneye btn-danger" style="text-decoration: none;"><i class="fa fa-eye"></i></button></td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Votre Description</td>
-                  <td>je suis ....  <button class="btneye btn-danger" style="text-decoration: none;"><i class="fa fa-eye"></i></button></i></td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Denomination</td>
-                  <td>Personne physique</i></td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               <tr>
-                  <td>Profession</td>
-                  <td>Developpeur, formateur, ...<button class="btneye btn-danger" style="text-decoration: none;"><i class="fa fa-eye"></i></button></i></td>
-                  <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button> </td>
-               </tr>
-               </table>
+            <div class="container" id="tb_profile">
+               
             </div>
          </div>
          <!-- section consulter-->
          <div class="front_consult">
+            <div class="" id="tb_media">
+               
+            </div>
             <div class="container">
                <p><h3>activités publier récement:</h3> </p>
                <div class="card-deck">
@@ -247,21 +214,27 @@
          <!-- section publier-->
          <div class="front_media">
             <div class="container">
-               <p><h3>Publier un job:</h3></p>
+               <p><h3>Publier une Offre:</h3></p>
                <div class="">
-                  <form class="form" action="" method="post">
+                  <form class="form" action="" method="post" id="Form_media" enctype="multipart/form-data">
                   <label>publier</label><br>
-                  <input type="text" name="name_media" placeholder="nom du job" class="form-control mr-sm-2"><br>
-                  <input type="text" name="intitule_media" placeholder="intitule du job" class="form-control mr-sm-2"><br>
-                  <input type="text" name="price" placeholder="tarif du job" class="form-control mr-sm-2"><br>
+                  <input type="text" name="task_description.title" placeholder="Donner un titre" class="form-control mr-sm-2" required><br>
+                  <input type="text" name="task_description.priority" placeholder="Quel est la priorite (entre 1 et 2)" class="form-control mr-sm-2" required><br>
+                  <input type="text" name="task_description.base_amount" placeholder="tarif de base du job" class="form-control mr-sm-2" required><br>
+                  Date de debut:<input type="date" name="task_description.period.start_date" class="form-control mr-sm-2" required><br>
+                  Date de fin:<input type="date" name="task_description.period.end_date" class="form-control mr-sm-2" required><br>
+                  Images:<input type="file" name="task_description.medias" placeholder="inclure un media" class="form-control mr-sm-2"><br>
+                  <input type="hidden" name="task_description.difficulty" value="low" class="form-control mr-sm-2" required><br>
                   <select class="selectpicker form-control" data-style="btn-green">
                      <option aria-placeholder="devise">Devise</option>
                      <option>Dollars americain</option>
                      <option>FCFA</option>
                      <option>Euro</option>
                   </select><br>
-                  <textarea class="text-area" placeholder="description du jobs" style="width: 50rem; height: 20rem;"></textarea><br>
+                  <textarea name="task_description.description" class="text-area" placeholder="description du jobs" style="width: 50rem; height: 20rem;" required></textarea><br>
+                  <div><br></div>
                   <input type="submit" value="publier" class="btn btn-info"><br>
+                  <div><br></div>
                </form>
             </div>
             </div>
@@ -280,7 +253,7 @@
    </section>
    <!-- end section -->
 
-
+   <%-include("../modals/login") %> 
 </body>
 
 </html>
