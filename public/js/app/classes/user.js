@@ -190,11 +190,42 @@ export class User {
     
     static async signup(form_data_signup){
 
-        let response = await request("/users/signup","POST",form_data_signup);
-        
-        return await response.json();
-    
-    }
+        let result = {
 
+            message: null, 
+            error: null
+        
+        }
+        
+        try{
+
+
+                let response = await request("/users/signup","POST",form_data_signup);       
+              
+                let data =  await response.json();
+
+                if(data.message){
+
+                    result.message = data.message;
+                
+                }else {
+
+                    result.error = data.error
+
+                
+                }
+            
+            }catch(error){
+
+            
+                console.log(error.toString());
+            
+            }finally {
+
+                return result;
+            
+            }
+
+        }
 
 }

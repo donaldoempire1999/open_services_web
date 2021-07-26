@@ -12,12 +12,13 @@ $(function () {
        //let response = await access("/users/signup", 'POST', formdata);
 
        let result = await User.signup(formdata)
-        if(result.error){
-            alert(result.error);
-            console.log("erreur");
-        }else{
+        if(result.message !== null){
             
-            document.location.href = "/profile";
+            alert(result.message)
+            document.location.href = "/";
+        }else{  
+        
+            console.log(result.error);  
         }
  
     });
