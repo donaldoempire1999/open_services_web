@@ -14,7 +14,7 @@ Voici comment est structuré le projet
    Contient tout ce qui est public dans notre projet
     
       -> public/css : pour le css
-      -> public/fonts: pour le stghyle d'écriture
+      -> public/fonts: pour le style d'écriture
       -> public/images: pour les images
       -> public/js : contient tout nos scripts js
           -> /app : contient les js propres à l'application, donc celui codé par nos developpeurs
