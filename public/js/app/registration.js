@@ -11,9 +11,7 @@ $(function () {
        formdata = JSON.stringify(formdata);
        console.log(formdata);
        let response = await access("/users/signup", 'POST', formdata);
-       let data = await response.json();
-       console.log(response);
-       console.log(data);
+       
  
     });
  })

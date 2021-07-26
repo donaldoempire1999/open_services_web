@@ -450,7 +450,25 @@
           </form>
       </div>
      </div>
-     
+     <script>
+      if(localStorage.getItem("profile_view")){
+         document.getElementById("btn_login").style.display = "none";
+         document.getElementById("btn_out").style.display = "flex";
+      }else{
+         document.getElementById("btn_login").style.display = "hidden";
+         document.getElementById("btn_out").style.display = "none";
+      }
+   </script>
+   <!-- login forme modal-->
+    <script type="text/javascript">
+         document.getElementById('btn_login').addEventListener('click', function(){
+         document.querySelector('.bg-login').style.display = 'flex';
+      });
+      document.querySelector('.close_login').addEventListener('click', function(){
+         document.querySelector('.bg-login').style.display = 'none';
+      });
+
+ </script>
    </body>
 </html>
 

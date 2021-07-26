@@ -1,5 +1,5 @@
 import { get_entry } from "../helpers.js";
-
+/*
 export class Contrat {
 
     _id = "";
@@ -62,4 +62,4 @@ export class Contrat {
             return null
         }
      }
- }
+ } */
