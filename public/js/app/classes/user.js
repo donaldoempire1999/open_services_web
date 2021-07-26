@@ -41,7 +41,7 @@ export class User {
 
         return `<tr> <td> ${label} </td> <td> ${value} </td> 
         
-        <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button></td> </tr>`
+        <td><button class="btn btn-primary" style="size: 5px;"><i class="fa fa-pencil"></i></button></td> </tr> `
      
      }
 
@@ -112,7 +112,7 @@ export class User {
                      .concat(this.setRow("Numero de telephone" , this.phone_number));
 
         
-                     return `<table> ${body_table} </table>`;
+                     return `<table class="table"> ${body_table} </table>`;
     
     }
 
@@ -190,7 +190,7 @@ export class User {
     
     static async signup(form_data_signup){
 
-        let response = await request("/users/signup","GET",form_data_signup);
+        let response = await request("/users/signup","POST",form_data_signup);
         
         return await response.json();
     
