@@ -84,10 +84,13 @@
                </div>
             </div>
          </div>
-         <!-- section Mes jobs-->
+         <!-- section Mes contrats-->
          <div class="front_jobs">
             <div class="container">
-               <p><h3>Vos Jobs en cours:</h3></p>
+               <div class="container" id="tb_contrat">
+
+               </div>
+               <p><h3>Vos contrat en cours:</h3></p>
                <div class="card-columns">
                   <!-- 1-->
                   <div class="card ">
@@ -212,7 +215,7 @@
             </div>
          </div>
          <!-- section publier-->
-         <div class="front_media">
+         <div class="front_media"> 
             <div class="container">
                <p><h3>Publier une Offre:</h3></p>
                <div class="">
@@ -232,6 +235,8 @@
                      <option>Euro</option>
                   </select><br>
                   <textarea name="task_description.description" class="text-area" placeholder="description du jobs" style="width: 50rem; height: 20rem;" required></textarea><br>
+                  <div><br></div>
+                  <textarea name="close" class="text-area" placeholder="Decriver les close du contrat lier au job" style="width: 50rem; height: 20rem;" required></textarea><br>
                   <div><br></div>
                   <input type="submit" value="publier" class="btn btn-info"><br>
                   <div><br></div>
