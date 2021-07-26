@@ -19,4 +19,9 @@ $(async function(){
         }
 
     });
+
+    $("#btn_out").on('click', async function(e){
+        localStorage.removeItem("profile_view");
+        document.location.href = "/";
+    })
 })
