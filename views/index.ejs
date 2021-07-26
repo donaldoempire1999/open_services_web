@@ -4,28 +4,7 @@
       <!-- header -->
       <header class="header header_style1">
          <div class="container">
-            <div class="row">
-               <div class="col-md-9 col-lg-10">
-                  <div class="logo"><a href="index.html"><img src="images/logo.png" alt="#" /></a></div>
-                  <div class="main_menu float-right">
-                     <div class="menu">
-                        <ul class="clearfix">
-                            
-                           <li><a href="/about">A Propos</a></li>
-                           <li><a href="/service">Chercher Jobs</a></li>
-                           <li><a href="/team">Equipe</a></li>
-                           <li><a href="/profile">Votre Profile</a></li>
-
-                           <button  style="width: 100px;" class="btn btn-primary" id="btn_login"><i class="fa fa-circle" style="color:white;"></i></a> login</button>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <!-- tof de profil -->
-               <div class="right" style="margin-right: -100px;">
-                  <p class="user"><img src="images/t1.png" height="60px" width="60px"></i></p>
-                </div>
-            </div>
+            <%-include("./layout/nav") %>
          </div>
       </header>
       <section id="banner_parallax" class="slide_banner1">
@@ -435,136 +414,12 @@
       </section>
       <!-- end section -->
 
-      <!-- footer -->
-      <footer class="footer_style_2">
-         <div class="footer_top">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 margin_bottom_30">
-                     <div class="full width_9" style="margin-bottom:25px;"> <a href="index.html"><img class="img-responsive" width="250" src="images/logo.png" alt="#"></a> </div>
-                     <div class="full width_9">
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                     </div>
-                     <div class="full width_9">
-                        <p>the vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati..</p>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
-                     <div class="full">
-                        <div class="footer_blog_2 width_9">
-                           <h3>Twitter Feed</h3>
-                           <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
-                              Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
-                           </p>
-                           <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
-                              Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 margin_bottom_30">
-                     <div class="full">
-                        <div class="footer_blog_2">
-                           <h3>Social</h3>
-                        </div>
-                     </div>
-                     <div class="full">
-                        <ul class="footer-links">
-                           <li><a href="#"><i class="fa fa-facebook"></i> 256 Likes</a></li>
-                           <li><a href="#"><i class="fa fa-github"></i> 57+ Projects</a></li>
-                           <li><a href="#"><i class="fa fa-twitter"></i> 1,258 Followers</a></li>
-                           <li><a href="#"><i class="fa fa-pinterest"></i> 2538+ Pins</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
-                     <div class="full">
-                        <div class="footer_blog_2 width_9">
-                           <h3>Blog</h3>
-                        </div>
-                        <div class="blog_post_footer">
-                           <div class="blog_post_img"> <img width="80" height="80" src="images/scr1.png" alt="#"> </div>
-                           <div class="blog_post_cont">
-                              <p class="date">July 22, 2015</p>
-                              <p class="post_head">Round and round like a carousel</p>
-                           </div>
-                        </div>
-                        <div class="blog_post_footer">
-                           <div class="blog_post_img"> <img width="80" height="80" src="images/scr2.png" alt="#"> </div>
-                           <div class="blog_post_cont">
-                              <p class="date">July 22, 2015</p>
-                              <p class="post_head">Round and round like a carousel</p>
-                           </div>
-                        </div>
-                        <div class="blog_post_footer">
-                           <div class="blog_post_img"> <img width="80" height="80" src="images/scr3.png" alt="#"> </div>
-                           <div class="blog_post_cont">
-                              <p class="date">July 22, 2015</p>
-                              <p class="post_head">Round and round like a carousel</p> 
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- footer bottom -->
-         <div class="footer_bottom">
-            <p>Designed and developed<strong> for Project_university</strong></p>
-         </div>
-      </footer>
-      <!-- end footer -->
+      <%- include("./layout/footer") %> 
    <!-- forme model login -->
     <!-- login  -->
-    <div class="bg-login">
-      <div class="modal-login">
-          <div class="close_login">+</div>
-          <p>
-              <h3> Login</h3>
-          </p>
-          <form method="post" id="nForm" action="index.html">
-             <div class="wrap-login100">
-                     <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">phone number</label>
-                        <input type="text" class="form-control" id="inputmail" placeholder="phone number">
-                     </div>
 
-                     <br>
+    <%- include("./modals/login") %> 
 
-                     <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                      </div>
-                 
-                     <div class="text-right p-t-8 p-b-31">
-                        <a  class="link link-primary" href="registration.html">Vous ne possede pas de comptes</a>
-                     </div>
-                     <br>
-                     <div>
-                         <input type="submit" value="Connexion" class="btn btn-success">
-                     </div>
-                     <div class="txt1 text-center p-t-54 p-b-20">
-                         <span>
-                             Connectez vous via
-                         </span>
-                     </div>
- 
-                     <div class="social">
-                         <a href="#" class="login100-social-item bg1">
-                             <i class="fa fa-facebook"></i>
-                         </a>
- 
-                         <a href="#" class="login100-social-item bg2">
-                             <i class="fa fa-twitter"></i>
-                         </a>
- 
-                         <a href="#" class="login100-social-item bg3">
-                             <i class="fa fa-google"></i>
-                         </a>
-                     </div>  
-                     </div>
-             </div>
-         </div>
          <!-- end login  -->
 
      </div>
