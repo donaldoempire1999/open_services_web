@@ -1,0 +1,86 @@
+.features-left p{
+     margin-bottom: 0;
+}
+.feature-left li{
+     display: block;
+}
+.feature-left :first-child{
+    margin-top: 10px!important;
+}
+.li_block{
+     display: inline-block;
+}
+.skils_badge{
+     text-transform: capitalize;
+     margin-right: 7px;
+     margin-bottom: 8px;
+     padding: 8px!important;
+     border-radius: 12px;
+     font-size: 12px;
+}
+.result-bucket li {
+     padding: 7px 15px;
+ }
+ 
+ .instant-results {
+     background-color: #fff;
+     width: 900px;
+     color: gray;
+     top: 100%;
+     left: 0;
+     border: 1px solid rgba(0, 0, 0, .15);
+     border-radius: 4px;
+     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, .175);
+     display: none;
+     padding-left: 40px;
+     
+     margin: 10px auto;
+ }
+ .result-link {
+     color: #4f7593;  
+ }
+ .result-link:hover {
+   background-color: #4f7593;
+}
+ .result-link .media-body {
+     font-size: 13px;
+     color: gray;
+     text-align: left;
+ }
+ .result-link .media-heading {
+     font-size: 15px;
+     font-weight: 400;
+     color: #4f7593;
+ }
+ .result-link:hover,
+ .result-link:hover .media-heading,
+ .result-link:hover .media-body {
+     text-decoration: none;
+     color: #4f7593
+ }
+ .result-link .media-object {
+     width: 50px;
+     padding: 3px;
+     border: 1px solid #c1c1c1;
+     border-radius: 3px;
+ }
+ .result-entry + .result-entry {
+     border-top:1px solid #ddd;
+}
+.pub-info{
+    font-weight: bold;
+}
+.pub_item{
+     background-color: darkgray;
+}
+.result-pub{
+     padding-top: 10px;
+     padding-bottom: 10px;
+} 
+.result-entry:hover{
+     background-color: #59C6CE;
+} 
+
+
+  

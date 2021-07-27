@@ -1,0 +1,80 @@
+.slide_banner1 {
+     min-height: 150px;
+     background-size: 80% 250px;
+     background-position: 1% 77%;
+ }
+
+ 
+.slide_cont {
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    left: 10px;
+}
+
+.searchbar{
+    margin-left: 8px ;
+    height: 40px;
+    width: 700px;
+}
+.instant-results{
+    margin-left: 8px ;
+    width: 700px;
+    padding-left: 0;
+}
+.search_input{
+    line-height: 20px;
+}
+.searchbar > .search_input{
+    padding: 0 10px;
+    width: 80%;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+.search_icon{
+    height: 20px;
+    width: 20px;
+}
+.searchbar > .search_icon{
+    margin-right: 10px;
+    /* color: transparent; */
+    background-color: transparent;
+}
+.app-features{
+    padding-left: 40px;
+}
+.app-features li{
+    margin-top: 20px!important;
+}
+.app-features li:first{
+    margin-top: 10px!important;
+}
+.publication{
+    padding-right: 60px;padding-top: 0px;
+}
+.publication h5{
+    text-align: center;margin-bottom: 10px;
+}
+
+.publication li, .publication p{
+    font-weight: light;
+}
+
+.publication li{
+    margin-top: 0px; padding-left: 4px; list-style: circle;
+}
+.publication ul{
+margin-left: 30px;margin-top: 4px;
+}
+.publication h6{
+    margin-top: 8px;
+}
+.skils_badge{
+    padding: 5px;
+}
+.follow_pub{
+vertical-align: middle!important;line-height: 35px!important;padding: 5px!important;width: 60px!important;margin: 0 auto!important;margin-top: 8px!important;
+}
+li.result-pub:first{
+    margin-top: 10px!important;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Searchpage</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="images/fevicon/favicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="css/animate.css" /> 
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+      <link rel="stylesheet" href="myadd/css/searbar.css" />
+      <link rel="stylesheet" href="myadd/css/other.css" />
+      <link rel="stylesheet" href="myadd/css/searchpage.css" />
+   </head>
+   <body id="default_theme" class="services">
+      
+      <section id="banner_parallax" class="slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2>Search Engine</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+
+      <!-- section -->
+      <section class="layout_padding layer_style" style="padding-top: 30px;">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12" style="width: 100%!important;">
+                  <div class="full text_align_center">
+                     
+
+                     <div class="searchbar">
+                        <input class="search_input" type="text" name="" placeholder="Search...">
+                        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                        <p class="top-keyword">
+                           <span class="hidden-xs">Top Keywords:</span>
+                           <span>Google,</span>
+                           <span>Bootstrap 3,</span>
+                           <span>Bootsnipp,</span>
+                           <span>Search,</span>
+                           <span>Suggestion</span>
+                       </p>
+                      </div>
+                      <div class="instant-results" >
+                        <ul class="list-unstyled result-bucket">
+                            
+                        </ul>
+                    </div>
+
+                      
+
+                  </div>
+               </div>
+            </div>
+            <div class="row app-features " >
+               
+               <div class="col-md-8 " style="margin-top: 10px;">
+                  <small id="eval_exec" style="display: none;">Environ <span id="nb_result">25</span> résultats (<span id="time_exec"></span>) secondes.</small>
+                  <ul class="features-left" >
+                    
+                     <li class="col-md-8 result-pub" style="padding-left: 5px; display: none;">
+                        <div class="media">
+                           <div class="media-body">
+                             <h5 class="mt-0">Media heading</h5>
+                             <span class="pub-info">statut:</span> <span class="badge badge-info" style="padding: 5px;">Carregando</span>
+                             <span class="pub-info">opening date: </span> <span class="badge badge-info" style="padding: 5px;">21-10-12</span>
+                             <p>
+                              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                             </p> 
+                           </div>
+                         </div>
+                     </li>                                    
+                  </ul>
+               </div>
+
+                <!-- Visualize contrat -->
+                <!-- <div class="col-md-4 ml-auto publication" style="">
+
+                  <div class="media">
+                     <div class="media-body">
+                        <h5 class="ml-auto" style="" id="cr_title">Media heading</h5>
+                        <h6 class="ml-auto">Annonceur</h6>
+                        <p style="margin-left: 10px;" class="cr_bio">
+                           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                           Cras purus odio, vestibulum in vulputate at.
+                        </p>
+                        <h6 class="ml-auto">Contrat</h6>
+                        <ul style="">
+                           <li style="">
+                              Type du contrat : <span id="cr_typ">  # </span>
+                           </li><br>
+                           <li style="">
+                              Début du contrat : <span id="cr_deb_time"></span>
+                           </li><br>
+                           <li style="">
+                              Fin du contrat : <span id="cr_fin_time"></span><br>
+                           </li><br>
+                           <li style="">
+                              Localisation : <span id="cr_loc"></span><br>
+                           </li>
+                        </ul>
+                        <p style="clear: both;"></p>
+                        <h6 class="ml-auto">Mission</h6>
+                        <ul style="" class="cr_mission">
+                           <li style="">
+                              <p style="margin-bottom: 0px;" id="cr_miss">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                           </li>
+                        </ul>
+                        <p style="clear: both;"></p>
+                        <h6 class="ml-auto" style="">Skills</h6>
+                        <p style="margin-left: 10px;margin-top: 5px;">
+                           <span class="badge badge-info skils_badge" style="">managment</span>
+                           <span class="badge badge-info skils_badge" style="">gestion</span>
+                           <span class="badge badge-info skils_badge" style="">ressources humaines</span>
+                           <span class="badge badge-info skils_badge" style="">permis de conduire</span>
+                        </p>
+                     </div>
+                  </div>
+                  
+                  Submit Button 
+                  <div class="form-group col-lg-8 mx-auto mb-0">
+                     <a href="#" class="btn btn-primary btn-block py-2" class="follow_pub"
+                        style="vertical-align: middle!important;line-height: 35px!important;padding: 5px!important;width: 60px!important;margin: 0 auto!important;margin-top: 8px!important;">
+                        <span class="font-weight-bold" >Suivre l'offre</span>
+                     </a>
+                  </div>-->
+
+                  <!-- Divider Text -->
+                  <!-- <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                     <div class="border-bottom w-100 ml-5"></div>
+                     <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+                     <div class="border-bottom w-100 mr-5"></div>
+                  </div> -->
+
+                  <!-- Already Registered -->
+                  <!-- <div class="text-center w-100">
+                     <p class="text-muted font-weight-bold">Not yet an account? <a href="#"
+                           class="text-primary ml-2">Signup</a></p>
+                  </div> -->
+                  
+               </div> 
+            </div>
+         </div>
+      </section>
+      <!-- end section col-sm-6 col-xs-12 col-lg-6 -->
+      
+      <!-- footer -->
+      <footer class="footer_style_2" class="" style=" position: fixed;bottom: 0;width: 100%;">
+         <!-- footer bottom -->
+         <div class="footer_bottom" >
+            <p>Dessigned and developed by <strong>html.design</strong></p>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!--=========== js section ===========-->
+      <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+      <script src="js/externs/jquery.min.js"></script>
+      <script src="js/externs/popper.min.js"></script>
+      <script src="js/externs/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <!-- <script src="js/wow.js"></script> -->
+      <!-- custom js -->
+      <!-- <script src="js/custom.js"></script> -->
+      <!-- google map js -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script> -->
+      <!-- end google map js -->
+      <script src="myadd/js/stack.js"></script>
+      <script src="myadd/js/rest_controller.js"></script>
+      <script src="myadd/js/main.js"></script>
+      <script src="myadd/js/searchpage.js"></script>
+
+
+      
+   </body>
+</html>

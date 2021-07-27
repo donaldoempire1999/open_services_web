@@ -1,0 +1,47 @@
+
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #405D9D;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #314879;
+}
+
+.btn-twitter {
+    background: #42AEEC;
+    border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #1799e4;
+}
+
+.form-control:not(select) {
+    padding: 1rem 0.5rem;
+}
+
+/* select{
+    padding-top: 20px;
+    padding-bottom: 20px;
+} */
+
+select#job{
+    /* margin-top: 10px; */
+    height: 52px!important;
+    padding: 1rem 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}

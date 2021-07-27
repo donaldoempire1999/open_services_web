@@ -1,5 +1,7 @@
 import { request } from "../acess.js"
+
 import { get_entry } from "../helpers.js";
+
 import { Publication } from "./publication.js";
 
 export class User {
@@ -31,10 +33,43 @@ export class User {
     token = ""
 
     // Les publications de l'utilisateur
-    publications = [Publication];
+    publications = [];
 
     //Les contrats de l'utilisateur
     contracts = [];
+
+    async setPublications(){
+
+        try {
+
+            let response = await request("/publications"  , "GET", undefined , this.token);
+        
+            let data = await response.json();
+
+            data.publications.forEach(item => {
+
+                let pub = new Publication();
+                
+                for(let entry in item){
+    
+                    pub[entry] =  get_entry(item , entry);
+                
+                };
+
+                this.publications.push(pub);
+            
+            });
+            
+        } catch (error) {
+            
+        
+            console.log(error);
+        
+        }
+        
+    }
+
+
 
     
     setRow(label , value){
@@ -86,7 +121,7 @@ export class User {
     
         return this.setRow("Country", this.address.country)
         
-             .concat(this.setRow("Region", this.address.region)).concat(this.setRow(""))
+             .concat(this.setRow("Region", this.address.region))
 
                   .concat(this.setRow("City", this.address.city))
                    
@@ -147,46 +182,39 @@ export class User {
 
     static async login (form_data){
 
-        let result = {
-            user: new User(),
-            error: null
-        }
+     
+            let error = null;
+        
 
-        try{
+            try{
+                    
+                    let response = await request("/users/login","POST",form_data);
+
+                    let data = await response.json();
+
+                    if(!data.error){
+
+                        // Ici mettons la token et l'user id dans une local storage session
+                        localStorage.setItem("token", data.token);
+                        localStorage.setItem("userId", data.userId)
+
+                    }else{
+                        error = data.error;
+                    }
+
                 
-                let response = await request("/users/login","POST",form_data);
 
-                let data = await response.json();
+            }catch(error){
 
-                if(!data.error){
+                console.log(error.toString());
+            
+            }finally{
+            
+                return error;
+            
+            }
 
-                    let user = await this.get_user(data.userId);
-                    
-                    user.token = data.token;
-
-                    // Ici on met l'utilisateur courant dans la session en cours
-                     localStorage.setItem("profile_view", user.getProfileView());
-
-                    
-                    result.user = user;
-
-                }else{
-                     result.error = data.error;
-                }
-
-               
-
-        }catch(error){
-
-            console.log(error.toString());
-        
-        }finally{
-        
-            return result;
-        
         }
-
-    }
     
     static async signup(form_data_signup){
 

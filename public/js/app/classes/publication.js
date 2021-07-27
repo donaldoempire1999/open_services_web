@@ -1,5 +1,3 @@
-import { get_entry } from "../helpers.js";
-
 export class Publication {
 
     _id = "";
@@ -13,30 +11,50 @@ export class Publication {
     __v = 0;
 
 
-    static async get_publication_by_id(_id){
+    static getPublicationsView(publications){
+                   
+        let view = "";
+  
+        publications.forEach(function(pub){
+          
+         view = view + pub.get_view();
 
-        let response = await request(`/publications/${_id}`,"GET");
+         console.log(pub);
+           
+         });
+  
+       return view;
+      
+  
+   }
 
-        if(response.status === 200){
-
-            let data = await response.json();
-
-            data = data.publication; // les donnéees concernant l'utilisateur
-        
-            let publication = new Publication();
-    
-            for(let entry in data){
-    
-                publication[entry] =  get_entry(data , entry);
+    get_view(){
+   
+        return `<div class="card border-light text-white bg-success mb-3" style="max-width: 18rem;">
             
-            }
-    
-            return publication;
+                      <div class="card-header">Publication</div>
+        
+                           <div class="card-body">
+          
+                                <h5 class="card-title">${this.task_description.title}</h5>
 
-        }else{
+                                <p class="text" style="color: white;"> Base Amount: ${this.task_description.base_amount} FCFA </p>
 
-            return null
-        }
-     }
- }
+                                <p class="text" style="color: white;"> Status:${this.state} </p>
 
+                                <p class="text" style="color: white;"> Points: ${this.task_description.points} </p>
+
+                                <p class="text" style="color: white;"> Priority: ${this.task_description.priority} </p>
+
+                                <p class="card-text" style="color: white;">Description: ${this.task_description.description}.</p>
+                
+                          </div>
+      
+                    </div>
+                    
+                </div>`;
+   
+       }
+
+ 
+}

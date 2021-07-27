@@ -1,7 +1,7 @@
 import {User} from "./classes/user.js";
 
 $(async function(){
-
+    
     $("#nForm").on('submit', async function (e) {
         e.preventDefault();
         
@@ -10,18 +10,18 @@ $(async function(){
         
         console.log(formdata);
 
-        let result = await User.login(formdata);
-        if(result.error){
-            //alert(result.error);
+        let error = await User.login(formdata);
+        if(error){
+            alert(result.error);
         }else{
-            
             document.location.href = "/profile";
         }
 
     });
 
     $("#btn_out").on('click', async function(e){
-        localStorage.removeItem("profile_view");
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
         document.location.href = "/";
-    })
+    });
 })

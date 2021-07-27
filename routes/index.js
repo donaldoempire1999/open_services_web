@@ -8,9 +8,16 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/service', function(req, res, next) {
-  res.render('pages/service');
+router.get('/search', function(req, res, next) {
+  res.render('pages/search_home');
 });
+
+
+
+router.get('/search_result', function(req, res, next) {
+  res.render('pages/searchpage');
+});
+
 
 
 router.get('/profile', function(req, res, next) {

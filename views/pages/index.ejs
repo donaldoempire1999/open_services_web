@@ -12,7 +12,7 @@
                         <ul class="clearfix">
             
                            <li><a href="/about">A Propos</a></li>
-                           <li><a href="/service">Recherche</a></li>
+                           <li><a href="/search">Recherche</a></li>
                            <li><a href="/team">Equipe</a></li>
                            <li><a href="/profile">Votre Profile</a></li>
                            <button class="btn btn-primary" id="btn_login"><strong>Login</strong> <i class="fa fa-circle"
@@ -451,7 +451,7 @@
       </div>
      </div>
      <script>
-      if(localStorage.getItem("profile_view")){
+      if(localStorage.getItem("token")){
          document.getElementById("btn_login").style.display = "none";
          document.getElementById("btn_out").style.display = "flex";
       }else{
