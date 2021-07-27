@@ -1,5 +1,5 @@
 var mydata;
-var url = "http://open-services-api.herokuapp.com";
+var url = "https://open-services-api.herokuapp.com";
 
 
 // =================== Requete get =============================== 
