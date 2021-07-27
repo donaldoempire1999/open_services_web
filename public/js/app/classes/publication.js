@@ -1,3 +1,4 @@
+import { convert_date } from "../helpers.js";
 export class Publication {
 
     _id = "";
@@ -29,31 +30,35 @@ export class Publication {
    }
 
     get_view(){
-   
-        return `<div class="card border-light text-white bg-success mb-3" style="max-width: 18rem;">
-            
-                      <div class="card-header">Publication</div>
+
+        return ` <!-- 1-->
         
-                           <div class="card-body">
-          
-                                <h5 class="card-title">${this.task_description.title}</h5>
+        <div class="card ">
+          <img class="card-img-top" src="images/bg_gradinat.png" alt="Card image cap">
+          <div class="card-body">
+           <h5 class="card-title">${this.task_description.title}</h5>
+           <p class="card-text">${this.task_description.description}</p>
+         </div>
+         
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item">Delai time:  ${convert_date(this.task_description.period.start_date)} - ${convert_date(this.task_description.period.end_date)} </li>
+           <li class="list-group-item">Point: ${this.task_description.points}</li>
+           <li class="list-group-item">Priority: ${this.task_description.priority}</li>
+           <li class="list-group-item"> Followers: ${this.followers.length}</li>
+           <li class="list-group-item"> Likes: ${this.likes}</li>
+           <li class="list-group-item"> Statut :${this.state}</li>       
+         </ul>
+         
+         <div class="card-body">
+           <a href="#" class="card-link"><button class="btn btn-info">Close</button></a>
+           <a href="#" class="card-link"><button class="btn btn-info">Candidates</a>
+         </div>
 
-                                <p class="text" style="color: white;"> Base Amount: ${this.task_description.base_amount} FCFA </p>
-
-                                <p class="text" style="color: white;"> Status:${this.state} </p>
-
-                                <p class="text" style="color: white;"> Points: ${this.task_description.points} </p>
-
-                                <p class="text" style="color: white;"> Priority: ${this.task_description.priority} </p>
-
-                                <p class="card-text" style="color: white;">Description: ${this.task_description.description}.</p>
-                
-                          </div>
+          <div class="card-footer">
+            <small class="text-muted">publicated at  ${convert_date(this.publication_date)}</small>
+          </div>
+        </div> <br>`
       
-                    </div>
-                    
-                </div>`;
-   
        }
 
  

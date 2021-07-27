@@ -37,8 +37,10 @@
 
          <!-- section profile-->
          <div class="front_profile">
+           <div class="container">
             <div class="container" id="tb_profile">
                
+            </div>
             </div>
          </div>
          <!-- section consulter-->
@@ -48,7 +50,7 @@
             </div>
             <div class="container">
                <p><h3>activités publier récement:</h3> </p>
-               <div class="card-deck" id="tb_pub">
+               <div class="card-columns" id="tb_pub">
                   
                    
                </div>               
@@ -103,6 +105,26 @@
                     </div>
                   </div>
                   <!-- 3-->
+                  <div class="card">
+                    <img class="card-img-top" src="images/bg_gradinat.png" alt="Card image cap">
+                    <div class="card-body">
+                     <h5 class="card-title">Formation photoshop</h5>
+                     <p class="card-text">creer des affiches publicitaire pour l'entreprise Projet M1.</p>
+                   </div>
+                   <ul class="list-group list-group-flush">
+                     <li class="list-group-item">publier par: Mr. Donald Daquin</li>
+                     <li class="list-group-item">Accepter par vous: Prosper Abouar</li>
+                     <li class="list-group-item">Delai time: 2mois</li>
+                   </ul>
+                   <div class="card-body">
+                     <a href="#" class="card-link">Voir plus</a>
+                     <a href="#" class="card-link">Annuler le job</a>
+                   </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+
                   <div class="card">
                     <img class="card-img-top" src="images/bg_gradinat.png" alt="Card image cap">
                     <div class="card-body">
@@ -190,27 +212,22 @@
                <p><h3>Publier une Offre:</h3></p>
                <div class="">
                   <form class="form" action="" method="post" id="Form_media" enctype="multipart/form-data">
-                  <label>publier</label><br>
-                  <input type="text" name="task_description.title" placeholder="Donner un titre" class="form-control mr-sm-2" required><br>
-                  <input type="text" name="task_description.priority" placeholder="Quel est la priorite (entre 1 et 2)" class="form-control mr-sm-2" required><br>
-                  <input type="text" name="task_description.base_amount" placeholder="tarif de base du job" class="form-control mr-sm-2" required><br>
-                  Date de debut:<input type="date" name="task_description.period.start_date" class="form-control mr-sm-2" required><br>
-                  Date de fin:<input type="date" name="task_description.period.end_date" class="form-control mr-sm-2" required><br>
-                  Images:<input type="file" name="task_description.medias" placeholder="inclure un media" class="form-control mr-sm-2"><br>
-                  <input type="hidden" name="task_description.difficulty" value="low" class="form-control mr-sm-2" required><br>
-                  <select class="selectpicker form-control" data-style="btn-green">
-                     <option aria-placeholder="devise">Devise</option>
-                     <option>Dollars americain</option>
-                     <option>FCFA</option>
-                     <option>Euro</option>
-                  </select><br>
-                  <textarea name="task_description.description" class="text-area" placeholder="description du jobs" style="width: 50rem; height: 20rem;" required></textarea><br>
-                  <div><br></div>
-                  <textarea name="close" class="text-area" placeholder="Decriver les close du contrat lier au job" style="width: 50rem; height: 20rem;" required></textarea><br>
-                  <div><br></div>
-                  <input type="submit" value="publier" class="btn btn-info"><br>
-                  <div><br></div>
-               </form>
+                     
+                      <input type="text" name="task_description.title" placeholder="Donner un titre" class="form-control mr-sm-2" required><br>
+                      <input type="number" name="task_description.priority" placeholder="Quel est la priorite (entre 1 et 2)" class="form-control mr-sm-2" required><br>
+                      <input type="number" name="task_description.base_amount" placeholder="tarif de base du job" class="form-control mr-sm-2" required><br>
+                      Date de debut:<input type="date" name="task_description.period.start_date" class="form-control mr-sm-2" required><br>
+                      Date de fin:<input type="date" name="task_description.period.end_date" class="form-control mr-sm-2" required><br>
+                      Images:<input type="file" name="task_description.medias" placeholder="inclure un media" class="form-control mr-sm-2"><br>
+                      <input type="hidden" name="task_description.difficulty" value="low" class="form-control mr-sm-2" required><br>
+                      <textarea name="task_description.description" class="text-area form-control" placeholder="description du jobs" style="width: 50rem; height: 20rem;" required></textarea><br>
+                      <div><br></div>
+                      <textarea name="close" class="text-area form-control" placeholder="Decriver les close du contrat lier au job" style="width: 50rem; height: 20rem;" required></textarea><br>
+                      <div><br></div>
+                      <input type="submit" value="publier" class="btn btn-info"><br>
+                      <div><br></div>
+              
+                    </form>
             </div>
             </div>
          </div>
